@@ -1,0 +1,21 @@
+<h2>This is {{ test }}</h2>
+
+<label for="inp">Greetings</label>
+<input id="inp" [(ngModel)]="inputValue" placeholder=":D " />
+<p>{{ inputValue }}</p>
+
+<div *ngIf="test == 'test'">
+  <button
+    type="button"
+    class="testButton"
+    (click)="display = output(inputValue)"
+  >
+    Enter
+  </button>
+  <div *ngIf="display">
+    <p>You entered: {{ display }}</p>
+  </div>
+</div>
+
+<input #ref1 type="text" [(ngModel)]="firstExample" />
+<span *ngIf="true">Value: {{ ref1.value }}</span>
